@@ -25,6 +25,11 @@ namespace PortalAcademy.Models
         {
         }
 
+
+
+    //test change
+
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
