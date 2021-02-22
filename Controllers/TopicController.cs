@@ -82,7 +82,7 @@ namespace AcademicPortal.Controllers
 		// DELETE: Topic/delete
 		[HttpPost]
 		[AccessAuthorize(Roles = "staff")]
-		[ValidateAntiForgeryToken
+		[ValidateAntiForgeryToken]
 		public ActionResult Delete(int id)
 		{
 			var topicToRemove = _context.Topics.SingleOrDefault(p => p.Id == id);

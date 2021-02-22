@@ -18,8 +18,9 @@
                 .ForeignKey("dbo.UserInfoes", t => t.TraineeInfo_UserId, cascadeDelete: true)
                 .ForeignKey("dbo.Courses", t => t.Course_Id, cascadeDelete: true)
                 .Index(t => t.TraineeInfo_UserId)
-                .Index(t => t.Course_Id);
-            
+                //.Index(t => t.Course_id);
+                 .Index(t => t.Course_Id);
+
         }
         
         public override void Down()
