@@ -5,9 +5,9 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
-using PortalAcademy.Models;
+using AcademicPortal.Models;
 
-namespace PortalAcademy
+namespace AcademicPortal
 {
     public partial class Startup
     {

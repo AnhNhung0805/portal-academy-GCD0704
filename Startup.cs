@@ -1,8 +1,8 @@
 ﻿using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(PortalAcademy.Startup))]
-namespace PortalAcademy
+[assembly: OwinStartupAttribute(typeof(AcademicPortal.Startup))]
+namespace AcademicPortal
 {
     public partial class Startup
     {
