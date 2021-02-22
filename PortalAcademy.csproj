@@ -254,6 +254,10 @@
     <Compile Include="ViewModels\UserViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\App_Data\aspnet-AcademicPortal-20200810032614.mdf" />
+    <Content Include="App_Data\App_Data\aspnet-AcademicPortal-20200810032614_log.ldf">
+      <DependentUpon>aspnet-AcademicPortal-20200810032614.mdf</DependentUpon>
+    </Content>
     <Content Include="bin\AcademicPortal.dll" />
     <Content Include="bin\AcademicPortal.pdb" />
     <Content Include="bin\Antlr3.Runtime.dll" />
@@ -628,7 +632,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
