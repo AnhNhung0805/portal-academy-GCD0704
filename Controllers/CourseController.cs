@@ -45,6 +45,7 @@ namespace AcademicPortal.Controllers
 		{
 			_context.Courses.Add(model);
 			_context.SaveChanges();
+			//add 
 
 			this.AddNotification("Added a new course!", NotificationType.SUCCESS);
 			return RedirectToAction("Index");
