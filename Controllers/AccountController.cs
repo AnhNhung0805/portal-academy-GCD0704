@@ -9,7 +9,6 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using AcademicPortal.Models;
-using AcademicPortal.Attributes;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.Collections.Generic;
 using AcademicPortal.Extensions;
@@ -19,6 +18,26 @@ using Microsoft.Ajax.Utilities;
 
 namespace AcademicPortal.Controllers
 {
+	//accessAuthorize for role to RedirectResult
+	public class AccessAuthorize : AuthorizeAttribute
+	{
+		public override void OnAuthorization(AuthorizationContext filterContext)
+		{
+
+			if (this.AuthorizeCore(filterContext.HttpContext))
+				base.OnAuthorization(filterContext);
+			else
+			{
+				var user = filterContext.HttpContext.User;
+
+				if (user.Identity.IsAuthenticated)
+					filterContext.Result = new RedirectResult("~/Error/AccessDenied");
+				else
+					filterContext.Result = new RedirectResult("~/Account/Login");
+			}
+		}
+	}
+	
 	public class AccountController : Controller
 	{
 		private ApplicationSignInManager _signInManager;
